@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Update page
+{% endblock %}
+
+{% block body %}
+<center>
+    <div class="container mt-4">
+
+        <h1>
+            Task Manager
+        </h1>
+    </div>
+
+    <div class="container mt-4">
+        <form action="/update/{{task_up.id}}" method="post">
+            <b> Task Name</b> : <input type="text" name="task" id="task" value="{{task_up.content}}">
+            <input type="submit" , name="addTask" value="Update Task">
+        </form>
+    </div>
+</center>
+{% endblock %}
